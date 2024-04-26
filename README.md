@@ -22,3 +22,8 @@ Liens pour l'inspiration
 -https://dribbble.com/shots/23484282-Onboarding-Screens-Ui-Design
 -https://dribbble.com/shots/19025371-Event-Management-App
 -https://dribbble.com/shots/17172919-Event-Management/attachments/12273628?mode=media
+
+
+
+pour créer une nouvelle branche
+executer git checkout -b <nom_de_la_branche>
