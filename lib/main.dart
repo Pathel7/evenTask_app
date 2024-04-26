@@ -1,5 +1,4 @@
 import 'package:event_manager_app/pages/intro/introPage.dart';
-import 'package:event_manager_app/pages/participant/participantCreationPage.dart';
 import 'package:flutter/material.dart';
 
 void main() {
