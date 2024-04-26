@@ -114,7 +114,9 @@ void main() async {
       nom: "Mario Bros",
       email: "mariobros15@gmail.com",
       present: false,
-      interesse: true);
+      interesse: true,
+      utilisateurId: 1,
+      evenementId: 1);
 
   var resultatParticipant = await service.creerParticipant(nouveauParticipant);
   print("resultat création nouveau participant: $resultatParticipant");
@@ -123,7 +125,8 @@ void main() async {
 
   listeParticipants.forEach((participant) {
     print("");
-    print("Participant: ${participant.nom}" + "${participant.email}");
+    print(
+        "Participant: ${participant.interesse}" + "${participant.evenementId}");
   });
 
   // evenement data

@@ -8,6 +8,6 @@ class Utilisateur {
     required this.id,
     this.nom = "",
     this.motDePasse = "",
-    this.email = "",
+    this.email = "", required String numeroTel,
   });
 }
