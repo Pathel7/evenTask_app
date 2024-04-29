@@ -155,37 +155,4 @@ class IntroPage extends StatelessWidget {
               suffixIcon: Icon(Icons.visibility_off))),
     );
   }
-
-  Widget _seConnecterBtn(BuildContext context, String montext) {
-    return Container(
-      width: double.infinity,
-      margin: EdgeInsets.symmetric(horizontal: 20),
-      child: ElevatedButton(
-        style: ElevatedButton.styleFrom(
-            padding: EdgeInsets.symmetric(horizontal: 20),
-            backgroundColor: Color(0xFFD60B52),
-            foregroundColor: Colors.white),
-        onPressed: () {},
-        child: Text(montext, style: TextStyle(fontSize: 20)),
-      ),
-    );
-  }
-
-  Widget _crerCompteBtn(BuildContext context, String montext) {
-    return Container(
-      width: double.infinity,
-      margin: EdgeInsets.symmetric(horizontal: 20),
-      child: ElevatedButton(
-        style: ElevatedButton.styleFrom(
-            side: BorderSide(
-              color: Color(0xFFD60B52),
-              //width: 1.0
-            ),
-            padding: EdgeInsets.symmetric(horizontal: 20),
-            foregroundColor: Color(0xFFD60B52)),
-        onPressed: () {},
-        child: Text(montext, style: TextStyle(fontSize: 20)),
-      ),
-    );
-  }
 }
