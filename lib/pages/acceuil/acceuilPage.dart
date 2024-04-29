@@ -6,21 +6,28 @@ class AccueilPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: ListView(
-      shrinkWrap: true,
-      children: [
-        Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            _enTete(),
-            SizedBox(
-              height: 15.0,
-            ),
-            _search(),
-          ],
-        ),
-      ],
+        body: SingleChildScrollView(
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          _enTete(),
+          SizedBox(
+            height: 15.0,
+          ),
+          _search(),
+        ],
+      ),
     ));
+  }
+
+  Widget _returnText({required String monText}) {
+    return Text(
+      monText,
+      strutStyle: StrutStyle(
+          fontStyle: FontStyle.italic,
+          fontSize: 18,
+          fontWeight: FontWeight.bold),
+    );
   }
 
   Widget _enTete() {
@@ -59,15 +66,15 @@ class AccueilPage extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Padding(
-          padding: const EdgeInsets.only(right: 60.0),
+          padding: const EdgeInsets.only(right: 50.0),
           child: SizedBox(
-            width: 280.0,
+            width: 260.0,
             height: 34.0,
             child: TextFormField(
                 keyboardType: TextInputType.name,
                 cursorColor: Colors.black,
                 decoration: InputDecoration(
-                  floatingLabelAlignment: FloatingLabelAlignment.center,
+                  //floatingLabelAlignment: FloatingLabelAlignment.center,
                   floatingLabelStyle: TextStyle(color: Color(0xFFD60B52)),
                   filled: true,
                   labelStyle: TextStyle(
@@ -77,7 +84,7 @@ class AccueilPage extends StatelessWidget {
                   focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(30.0)),
                     borderSide:
-                        BorderSide(color: Color(0xFFD60B52).withOpacity(0.3)),
+                        BorderSide(color: Colors.black.withOpacity(0.3)),
                   ),
                   contentPadding:
                       EdgeInsets.symmetric(vertical: 2.0, horizontal: 3.0),
@@ -85,7 +92,12 @@ class AccueilPage extends StatelessWidget {
                     borderRadius: BorderRadius.all(Radius.circular(30.0)),
                     borderSide: BorderSide.none,
                   ),
-                  labelText: "recherche",
+                  //labelText: "recherche",
+                  hintText: "recherche",
+                  hintStyle: TextStyle(
+                      color: Color.fromARGB(255, 26, 23, 23),
+                      fontSize: 13.0,
+                      fontStyle: FontStyle.italic),
                   prefixIcon: Icon(
                     Icons.search_rounded,
                     color: Color.fromARGB(255, 129, 88, 102),
@@ -93,7 +105,7 @@ class AccueilPage extends StatelessWidget {
                 )),
           ),
         ),
-        Icon(Icons.mode_edit_rounded),
+        Icon(Icons.add_circle_rounded),
       ],
     );
   }
