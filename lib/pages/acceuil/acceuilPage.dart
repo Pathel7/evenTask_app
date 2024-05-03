@@ -8,6 +8,7 @@ class AccueilPage extends StatelessWidget {
     return Scaffold(
         body: SingleChildScrollView(
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         mainAxisSize: MainAxisSize.min,
         children: [
           _enTete(),

@@ -8,24 +8,27 @@ class IntroPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          _logo(),
-          _sloganText(),
-          SizedBox(
-            height: 40.0,
-          ),
-          _dotPoint(),
-          SizedBox(
-            height: 40.0,
-          ),
-          _seConnecterBtn(context, "Se connecter"),
-          SizedBox(
-            height: 15.0,
-          ),
-          _crerCompteBtn(context, "Créer un compte")
-        ],
+      body: SingleChildScrollView(
+        physics: AlwaysScrollableScrollPhysics(),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            _logo(),
+            _sloganText(),
+            SizedBox(
+              height: 40.0,
+            ),
+            _dotPoint(),
+            SizedBox(
+              height: 40.0,
+            ),
+            _seConnecterBtn(context, "Se connecter"),
+            SizedBox(
+              height: 15.0,
+            ),
+            _crerCompteBtn(context, "Créer un compte")
+          ],
+        ),
       ),
     );
   }
