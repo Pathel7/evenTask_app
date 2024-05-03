@@ -76,9 +76,14 @@ class UtilisateurCreationPage extends StatelessWidget {
         margin: EdgeInsets.symmetric(horizontal: 30.0),
         child: ElevatedButton.icon(
           style: ElevatedButton.styleFrom(
-              //padding: EdgeInsets.symmetric(horizontal: 10),
-              backgroundColor: Color(0xFFD60B52),
-              foregroundColor: Colors.white),
+              side: BorderSide(
+                color: Color(0xFFD60B52),
+                //width: 1.0
+              ),
+              padding: EdgeInsets.symmetric(horizontal: 20),
+              foregroundColor: Color(0xFFD60B52),
+            backgroundColor: Colors.white,
+          ),
           onPressed: () {},
           icon: Icon(
             Ionicons.logo_google,

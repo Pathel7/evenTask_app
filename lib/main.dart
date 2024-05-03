@@ -1,5 +1,6 @@
 import 'package:event_manager_app/pages/acceuil/acceuilPage.dart';
 import 'package:event_manager_app/pages/connexion/connexionPage.dart';
+import 'package:event_manager_app/pages/evenementCreation/evenementCreationPage.dart';
 import 'package:event_manager_app/pages/intro/introPage.dart';
 import 'package:event_manager_app/pages/utilisateurCreation/utilisateurCreationPage.dart';
 import 'package:flutter/material.dart';
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: UtilisateurCreationPage(),
+      home: EvenementCreationPage(),
     );
   }
 }
