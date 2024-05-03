@@ -7,37 +7,34 @@ class ConnexionPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        physics: AlwaysScrollableScrollPhysics(),
-        child: Column(
-          children: [
-            _imageUtilisateur(),
-            Padding(
-              padding: const EdgeInsets.only(left: 25.0, right: 25.0),
-              child: Column(
-                children: [
-                  _titreText(),
-                  SizedBox(
-                    height: 20.0,
-                  ),
-                  _emailField(),
-                  _passwordField(),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  _connecterText(),
-                  SizedBox(
-                    height: 20.0,
-                  ),
-                  _connecterBtn(context),
-                  SizedBox(
-                    height: 15.0,
-                  ),
-                ],
-              ),
+      body: Column(
+        children: [
+          _imageUtilisateur(),
+          Padding(
+            padding: const EdgeInsets.only(left: 25.0, right: 25.0),
+            child: Column(
+              children: [
+                _titreText(),
+                SizedBox(
+                  height: 20.0,
+                ),
+                _emailField(),
+                _passwordField(),
+                SizedBox(
+                  height: 20,
+                ),
+                _connecterText(),
+                SizedBox(
+                  height: 20.0,
+                ),
+                _connecterBtn(context),
+                SizedBox(
+                  height: 15.0,
+                ),
+              ],
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
@@ -66,9 +63,10 @@ class ConnexionPage extends StatelessWidget {
       padding: const EdgeInsets.only(bottom: 20.0),
       child: Container(
         width: double.infinity,
-        margin: EdgeInsets.symmetric(horizontal: 10.0),
+        margin: EdgeInsets.symmetric(horizontal: 35.0),
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(
+              padding: EdgeInsets.symmetric(horizontal: 20),
               backgroundColor: Color(0xFFD60B52),
               foregroundColor: Colors.white),
           onPressed: () {},
@@ -85,17 +83,14 @@ class ConnexionPage extends StatelessWidget {
           "Vous n'avez de compte?",
           style: TextStyle(fontSize: 13.0, fontWeight: FontWeight.bold),
         ),
-        TextButton(
-            onPressed: (){},
-            child: Text(
-              "Créer un compte ?",
-              style: TextStyle(
-                color: Color(0xFFD60B52),
-                fontWeight: FontWeight.bold,
-                fontSize: 12.0,
-              ),
-            ),),
-
+        Text(
+          "Créer un compte ?",
+          style: TextStyle(
+            color: Color(0xFFD60B52),
+            fontWeight: FontWeight.bold,
+            fontSize: 12.0,
+          ),
+        ),
       ],
     );
   }
@@ -110,8 +105,8 @@ class ConnexionPage extends StatelessWidget {
             floatingLabelAlignment: FloatingLabelAlignment.center,
             floatingLabelStyle: TextStyle(color: Color(0xFFD60B52)),
             filled: true,
-            hintStyle: TextStyle(
-              color: Colors.grey,
+            labelStyle: TextStyle(
+              color: Colors.black,
               fontSize: 13.0,
             ),
             focusedBorder: OutlineInputBorder(
@@ -123,8 +118,7 @@ class ConnexionPage extends StatelessWidget {
               borderRadius: BorderRadius.all(Radius.circular(30.0)),
               borderSide: BorderSide.none,
             ),
-            //labelText: "Email",
-            hintText: "Email",
+            labelText: "Email",
             prefixIcon: Icon(
               Icons.email_rounded,
               color: Colors.pink[300],
@@ -145,8 +139,8 @@ class ConnexionPage extends StatelessWidget {
               floatingLabelAlignment: FloatingLabelAlignment.center,
               floatingLabelStyle: TextStyle(color: Color(0xFFD60B52)),
               filled: true,
-              hintStyle: TextStyle(
-                color: Colors.grey,
+              labelStyle: TextStyle(
+                color: Colors.black,
                 fontSize: 13.0,
               ),
               focusedBorder: OutlineInputBorder(
@@ -159,8 +153,7 @@ class ConnexionPage extends StatelessWidget {
                 borderRadius: BorderRadius.all(Radius.circular(30.0)),
                 borderSide: BorderSide.none,
               ),
-              //labelText: " Mot de passe",
-              hintText: " Mot de passe",
+              labelText: " Mot de passe",
               prefixIcon: Icon(
                 Icons.lock,
                 color: Colors.pink[300],

@@ -182,7 +182,7 @@ class IntroPage extends StatelessWidget {
         style: ElevatedButton.styleFrom(
             side: BorderSide(
               color: Color(0xFFD60B52),
-              //width: 1.0
+              width: 2.0
             ),
             padding: EdgeInsets.symmetric(horizontal: 20),
             foregroundColor: Color(0xFFD60B52)),
